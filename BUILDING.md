@@ -117,8 +117,14 @@ the `-j4` flag. See the
 [GNU Make Documentation](https://www.gnu.org/software/make/manual/html_node/Parallel.html)
 for more information.
 
-Note that the above requires that `python` resolve to Python 2.6 or 2.7
-and not a newer version.
+Note that the above requires that `python` resolve to Python 2.6 or
+2.7 and not a newer version. If your system's default Python is Python
+3, build with
+
+```console
+$ ./tools/configure-force-py2.sh
+$ ./tools/make-force-py2.sh -j4
+```
 
 To run the tests:
 
